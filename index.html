@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event stopPropagation та Event preventDefault</title>
+    <style>
+        #box1, #box4 {
+            background: red;
+            width: 200px;
+            height: 200px;
+        }
+
+        #box2, #box5 {
+            background: green;
+            width: 150px;
+            height: 150px;
+        }
+
+        #box3, #box6 {
+            background: blue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<h2>event.stopPropagation</h2>
+<p>Прекращает дальнейшую передачу текущего события.</p>
+<p>Метод event.stopPropagation () зупиняє перемішування події до батьківських елементів,
+    запобігаючи виконанню будь-якого головного обробника подій</p>
+
+<div id="box1" class="box">
+    <div id="box2" class="box">
+        <div id="box3" class="box"></div>
+    </div>
+</div>
+<h2>event.preventDefault</h2>
+<p>Метод event.preventDefault () зупиняє дію за замовчуванням елемента, що відбувається.</p>
+<p>Наприклад: Заборона кнопки відправлення від подання форми Забороняє посилання від URL-адреси</p>
+<p>preventDefault використовується для зупинки нормального дії елемента, наприклад. preventDefault в обробнику кліків по
+    посиланнях буде зупинити посилання, що слідує, або на кнопці відправки припинить бланк, який буде подано.</p>
+<div id="box4" class="box">
+    <div id="box5" class="box">
+        <div id="box6" class="box"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
